@@ -1,34 +1,71 @@
-@font-face {
-    font-family: "Galaxy";
-    font-style: normal;
-    font-weight: 500;
-    font-display: block;
-    src: url(https://galxestatic.com/w/s/1b47ad3/fonts/galaxy.a33a70b.ttf) format("truetype")
-}
-
-root, body {
-    padding: 0;
-    margin: 0:
-}
-
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background: black;
-  }
-  
-  .message {
-    text-align: center;
-  }
-  
+  background: black;
+  margin: 0; /* Hilangkan margin default */
+  font-family: Arial, sans-serif; /* Ganti font jika diperlukan */
+}
 
-h1 {
-    color: white;
-    font-family: Galaxy;
-    text-align: center;
-    margin: 0;
-    font-size: 35px;
+.headline {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: black;
+  font-size: 20px;
+}
+
+.kontainerMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap; /* Untuk mengatasi overflow ketika tampilan menjadi kecil */
+}
+
+.box {
+  border: 3px solid #ccc;
+  width: 300px;
+  border-radius: 10px;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.box-atur {
+  padding-left: 10px; 
+  text-align: left;
+  margin-top: 10px;
+}
+
+.box-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.box-description {
+  font-size: 16px;
+  color: white;
+  margin: 0;
+}
+
+.box-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0px 0px;
+  display: block;
+  margin: 0 auto;
+}
+
+button {
+  background: purple;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  float: right;
+}
+
+/* Media query untuk tampilan perangkat Android */
+@media screen and (max-width: 768px) {
 }

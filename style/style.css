@@ -84,14 +84,16 @@ p {
 
 button {
     text-align: center;
-    padding: 15px;
-    border: none;
+    padding: 10px 15px;
+    border-color: white;
+    border-size: 2px;
     border-radius: 8px;
     font-family: Inter;
     font-weight: 500;
     font-size: 14px;
     display: flex;
-    background: rgb(153, 69, 255);
+    background: black;
+    /* background: rgb(153, 69, 255); */
     color: white;
     cursor: pointer;
 

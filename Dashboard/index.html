@@ -3,14 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="1;url=503.html">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="dashboard/clover.png" type="image/x-icon">
     <title>Dashboard</title>
 </head>
 <body>
-    <p>HTTP/1.1 503 Service Unavailable</p>
-    <br>
-    <p>Content-Type: text/html</p>
-    <br>
-    <p>Retry-After: 3600</p>
+    <div class="headline">
+        <h3>TRY FEATURE NOW</h3>
+    </div>
+    <div class="kontainerMain">
+      <div class="box">
+        <img src="imgtest.png" alt="Gambar" class="box-image">
+        <div class="box-atur">
+        <div class="box-title">Permainan</div>
+        <div class="box-description">Game menarik untuk mengisi waktu</div>
+        <button id="permainan">Check</button>
+        </div>
+      </div>
+      <div class="box">
+        <img src="imgtest.png" alt="Gambar" class="box-image">
+        <div class="box-atur">
+        <div class="box-title">Peralatan</div>
+        <div class="box-description">Cari peralatan yang anda butuhkan.</div>
+        <button id="peralatan">Check</button>
+        </div>
+      </div>
+      <div class="box" style="display: none;">
+        <img src="imgtest.png" alt="Gambar" class="box-image">
+        <div class="box-atur">
+        <div class="box-title">Judul Info</div>
+        <div class="box-description">
+          Ini adalah keterangan atau informasi tambahan yang berada di bawah judul.
+        </div>
+        </div>
+      </div>
+      <script>
+        // JavaScript untuk mengarahkan pengguna ke URL saat tombol diklik
+        document.getElementById("permainan").addEventListener("click", function() {
+          window.location.href = "/list_permainan";
+        });
+        document.getElementById("peralatan").addEventListener("click", function() {
+          window.location.href = "/list_peralatan";
+        });
+      </script>
+    </div>
 </body>
 </html>
