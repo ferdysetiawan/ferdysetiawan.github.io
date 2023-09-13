@@ -44,36 +44,18 @@ h1 {
     animation-iteration-count: infinite;
 }
 
+@keyframes headlineColor {
+    0% { color: #10FF9B; }
+    100% { color: rgb(153, 69, 255); }
+    50% { color: #2EDEF0; }
+}
+
 p {
     text-align: center;
     font-family: Inter;
     font-size: 1rem;
     color: white;
     margin-bottom: 20px;
-}
-
-.icon {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px; /* Add some space between the icons and the <p> tag */
-}
-
-.github, .twitter {
-    flex: 1;
-    text-align: center;
-    margin: 10px;
-}
-
-.github svg, .twitter svg {
-    width: 40px;
-    height: 40px;
-    vertical-align: middle;
-}
-
-@keyframes headlineColor {
-    0% { color: #10FF9B; }
-    100% { color: rgb(153, 69, 255); }
-    50% { color: #2EDEF0; }
 }
 
 .buttonNext {

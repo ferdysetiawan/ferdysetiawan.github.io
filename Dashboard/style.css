@@ -57,13 +57,14 @@ body {
 }
 
 button {
-  background: purple;
+  background: #26bad1;
   color: white;
   border: none;
   border-radius: 10px;
   padding: 10px;
   margin: 5px;
   float: right;
+  font-family: Arial, sans-serif;
 }
 
 /* Media query untuk tampilan perangkat Android */
