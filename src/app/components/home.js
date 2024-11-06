@@ -9,10 +9,10 @@ export default function Landing() {
         <p className="text-lg text-gray-400 text-center">それでも, 僕だけは忘れない 物語</p>
         
         <div className="mt-10 flex space-x-4">
-          <a href="#" className="bg-black text-white border border-white px-5 py-1.5 rounded-3xl shadow-md hover:bg-gray-800 transition-colors">
-            Portfolio
+          <a href="/introduce" className="bg-black text-white border border-white px-5 py-1.5 rounded-3xl shadow-md hover:bg-gray-800 transition-colors">
+            Identify Me!
           </a>
-          <a href="#" className="bg-[#00EC97] font-medium text-black px-5 py-1.5 rounded-3xl shadow-md hover:bg-[#00c87a] transition-colors">
+          <a href="/workshop" className="bg-[#00EC97] font-medium text-black px-5 py-1.5 rounded-3xl shadow-md hover:bg-[#00c87a] transition-colors">
             Explore It
           </a>
         </div>
