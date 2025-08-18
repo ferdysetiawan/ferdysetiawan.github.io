@@ -17,10 +17,13 @@ export default function Footer() {
               <h3 className="text-base text-gray-400 font-normal mb-1">Navigation</h3>
               <ul>
                 <li>
-                  <Link href="#home" className="hover:text-gray-300">Home</Link>
+                  <Link href="/" className="hover:text-gray-300">Home</Link>
                 </li>
                 <li>
-                  <Link href="#project" className="hover:text-gray-300">Project</Link>
+                  <Link href="/introduce" className="hover:text-gray-300">Introduce</Link>
+                </li>
+                <li>
+                  <Link href="/canvas" className="hover:text-gray-300">Canvas</Link>
                 </li>
               </ul>
             </div>
