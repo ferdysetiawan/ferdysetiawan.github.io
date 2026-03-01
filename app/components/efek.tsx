@@ -100,36 +100,36 @@ void main() {
   fragColor = vec4(col, intensity);
 }`;
 
+    const glCtx = gl;
+
     function compileShader(type: number, src: string) {
-      const s = gl.createShader(type)!;
-      gl.shaderSource(s, src);
-      gl.compileShader(s);
+      const s = glCtx.createShader(type)!;
+      glCtx.shaderSource(s, src);
+      glCtx.compileShader(s);
       return s;
     }
 
-    const prog = gl.createProgram()!;
-    gl.attachShader(prog, compileShader(gl.VERTEX_SHADER, VERT));
-    gl.attachShader(prog, compileShader(gl.FRAGMENT_SHADER, FRAG));
-    gl.linkProgram(prog);
-    gl.useProgram(prog);
+    const prog = glCtx.createProgram()!;
+    glCtx.attachShader(prog, compileShader(glCtx.VERTEX_SHADER, VERT));
+    glCtx.attachShader(prog, compileShader(glCtx.FRAGMENT_SHADER, FRAG));
+    glCtx.linkProgram(prog);
+    glCtx.useProgram(prog);
 
     const verts = new Float32Array([-1, -1, 3, -1, -1, 3]);
-    const buf = gl.createBuffer();
-    gl.bindBuffer(gl.ARRAY_BUFFER, buf);
-    gl.bufferData(gl.ARRAY_BUFFER, verts, gl.STATIC_DRAW);
+    const buf = glCtx.createBuffer();
+    glCtx.bindBuffer(glCtx.ARRAY_BUFFER, buf);
+    glCtx.bufferData(glCtx.ARRAY_BUFFER, verts, glCtx.STATIC_DRAW);
 
-    const loc = gl.getAttribLocation(prog, "position");
-    gl.enableVertexAttribArray(loc);
-    gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+    const loc = glCtx.getAttribLocation(prog, "position");
+    glCtx.enableVertexAttribArray(loc);
+    glCtx.vertexAttribPointer(loc, 2, glCtx.FLOAT, false, 0, 0);
 
-    const uTime = gl.getUniformLocation(prog, "uTime");
-    const uRes  = gl.getUniformLocation(prog, "uResolution");
+    const uTime = glCtx.getUniformLocation(prog, "uTime");
+    const uRes  = glCtx.getUniformLocation(prog, "uResolution");
 
-    gl.enable(gl.BLEND);
-    gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
-    gl.clearColor(0, 0, 0, 0);
-
-    const glCtx = gl;
+    glCtx.enable(glCtx.BLEND);
+    glCtx.blendFunc(glCtx.ONE, glCtx.ONE_MINUS_SRC_ALPHA);
+    glCtx.clearColor(0, 0, 0, 0);
 
     function resize() {
       if (!canvas) return;
