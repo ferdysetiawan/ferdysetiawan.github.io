@@ -11,7 +11,7 @@ const socialLinks = [
   { href: "https://github.com/ferdysetiawan", label: "GitHub" },
   { href: "https://linkedin.com/in/ferdysetiawan", label: "LinkedIn" },
   { href: "https://instagram.com/ferstawn", label: "Instagram" },
-  { href: "mailto:ferdysetiawan09@outlook.com", label: "Email" },
+  { href: "mailto:mail@ferdystawn.my.id", label: "Email" },
 ];
 
 export default function Footer() {
