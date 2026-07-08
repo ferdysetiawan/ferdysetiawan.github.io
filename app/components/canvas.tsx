@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Whois from "@/public/whois.png";
-import Cekwarna from "@/public/cekwarna.png";
+import Whois from "@/public/media/images/whois.png";
+import Cekwarna from "@/public/media/images/cekwarna.png";
 
 const projects = [
   {
@@ -52,37 +52,30 @@ export default function Canvas() {
           <div className="mt-3 h-1 w-28 rounded-full bg-[#00EC97]" />
         </div>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-          {projects.map(({ image, title, githubUrl, liveUrl, description, tags }) => (
-            <div key={title} className="shine-card">
-              <div className="card-inner">
-                <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="block shrink-0">
+          {projects.map(({ image, title, liveUrl, description, tags }) => (
+            <div key={title} className="shine-card transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#00EC97]/10">
+              <a 
+                href={liveUrl} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="card-inner group cursor-pointer outline-none block"
+              >
+                <div className="shrink-0 overflow-hidden">
                   <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
                     <Image
                       src={image}
                       alt={title}
                       fill
-                      className="object-cover object-top"
+                      priority={true}
+                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                       sizes="(max-width: 640px) 100vw, 50vw"
                     />
                   </div>
-                </a>
-                <div className="flex flex-grow flex-col gap-2 p-5">
-                  <a
-                    href={githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xl font-semibold text-white transition-opacity hover:opacity-80"
-                  >
+                </div>
+                <div className="flex flex-grow flex-col gap-2 p-5 bg-[#11141B]">
+                  <h3 className="text-xl font-semibold text-white transition-colors group-hover:text-[#00EC97]">
                     {title}
-                  </a>
-                  <a
-                    href={liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="truncate text-sm text-[#00EC97] transition-opacity hover:opacity-80"
-                  >
-                    {liveUrl}
-                  </a>
+                  </h3>
                   <p className="mt-1 flex-grow text-sm leading-relaxed text-gray-400">
                     {description}
                   </p>
@@ -97,7 +90,7 @@ export default function Canvas() {
                     ))}
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
           ))}
         </div>

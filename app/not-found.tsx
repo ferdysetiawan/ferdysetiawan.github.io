@@ -1,4 +1,4 @@
-const notFoundImage = "/404.png";
+const notFoundImage = "/media/images/404.png";
 import Header from '@/app/components/header';
 
 export default function NotFound() {
