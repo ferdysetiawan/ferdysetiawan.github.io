@@ -6,6 +6,7 @@ import Footer from '@/app/components/footer';
 export default function Home() {
   return (
     <>
+      <audio src="/media/music.wav" autoPlay loop playsInline style={{ display: "none" }} />
       <Header/>
       <Landing/>
       <Canvas/>

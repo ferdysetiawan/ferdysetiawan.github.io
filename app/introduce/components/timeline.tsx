@@ -38,35 +38,43 @@ const experiences = [
 
 export default function Timeline() {
   return (
-    <div className="bg-black px-4 py-20 text-white sm:px-6 lg:px-8">
-      <div className="text-center">
-        <h1 className="mb-2 text-3xl font-bold">EXPERIENCE</h1>
-        <div className="mx-auto h-1 w-24 rounded-full bg-[#00EC97]" />
+    <div className="px-4 pb-32 pt-12 text-white sm:px-6 lg:px-8">
+      <div className="mb-16 flex flex-col items-center text-center">
+        <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">EXPERIENCE</h2>
+        <div className="mt-4 h-1 w-24 rounded-full bg-[#00EC97] shadow-[0_0_10px_rgba(0,236,151,0.5)]" />
       </div>
 
-      <div className="relative mx-auto mt-14 max-w-4xl">
-        <div className="absolute bottom-0 left-0 top-0 w-[2px] bg-[#00EC97]" />
+      <div className="relative mx-auto max-w-4xl">
+        <div className="absolute bottom-0 left-[21px] top-0 w-[2px] bg-[#00EC97] sm:left-[105px]" />
 
-        {experiences.map((exp, index) => (
-          <div key={index} className="relative mb-12 pl-10 last:mb-0">
-            <div className="absolute -left-[5px] top-1.5 h-3 w-3 rounded-full border-2 border-[#00EC97] bg-black" />
+        <div className="space-y-12">
+          {experiences.map((exp, index) => (
+            <div key={index} className="relative pl-16 sm:pl-[160px]">
+              <div className="absolute left-[17px] sm:left-[101px] top-1.5 h-3 w-3 rounded-full bg-black border-2 border-[#00EC97]" />
 
-            <div className="grid grid-cols-[80px_1fr] gap-x-5 items-start">
-              <span className={`text-base font-bold ${exp.year === "Present" ? "text-[#00EC97]" : "text-[#00EC97]"}`}>
-                {exp.year}
-              </span>
+              <div className="absolute left-0 top-0 hidden w-[80px] text-right sm:block">
+                <span className="text-base font-bold text-[#00EC97]">{exp.year}</span>
+              </div>
+
               <div>
+                <div className="mb-1 sm:hidden">
+                  <span className="text-base font-bold text-[#00EC97]">
+                    {exp.year}
+                  </span>
+                </div>
                 <h4 className="text-base font-bold leading-snug text-white">{exp.title}</h4>
                 {exp.subtitle && (
-                  <p className="mt-0.5 text-sm font-medium text-gray-400">{exp.subtitle}</p>
+                  <p className="mt-0.5 text-sm font-medium text-gray-400">
+                    {exp.subtitle}
+                  </p>
                 )}
                 <p className="mt-3 text-justify text-sm leading-relaxed text-gray-300">
                   {exp.description}
                 </p>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
