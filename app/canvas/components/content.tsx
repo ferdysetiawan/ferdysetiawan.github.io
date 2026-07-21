@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Whois from "@/public/media/images/whois.png";
 import Cekwarna from "@/public/media/images/cekwarna.png";
+import Antarapi from "@/public/media/images/antarapi.png"
 
 type Project = {
   image?: Parameters<typeof Image>[0]["src"];
@@ -32,10 +33,12 @@ const projects: Project[] = [
     released: true,
   },
   {
-    title: "PROJECT THREE",
-    description: "Short description of what this project does and the problem it solves.",
-    tags: ["Tag1", "Tag2"],
-    released: false,
+    image:  Antarapi,
+    title: "ANTARAPI",
+    description: "Antarapi is an efficient API testing platform for sending, verifying, and debugging HTTP requests.",
+    url : "https://antarapi.ferdystawn.my.id/",
+    tags: ["Web", "Tools"],
+    released: true,
   },
   {
     title: "PROJECT FOUR",

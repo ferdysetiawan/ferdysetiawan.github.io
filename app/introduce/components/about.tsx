@@ -19,9 +19,6 @@ export default function About() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="flex flex-col gap-6 lg:col-span-7">
             <div className="space-y-2">
-              <span className="inline-block rounded-full border border-[#00EC97]/30 bg-[#00EC97]/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-[#00EC97]">
-                Who I Am
-              </span>
               <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
                 Ferdy Setiawan
               </h2>
