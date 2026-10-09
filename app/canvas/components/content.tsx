@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Whois from "@/public/media/images/whois.png";
 import Cekwarna from "@/public/media/images/cekwarna.png";
-import Antarapi from "@/public/media/images/antarapi.png"
+import Antarapi from "@/public/media/images/antarapi.png";
+import Otdr from "@/public/media/images/otdrku.png"
 
 type Project = {
   image?: Parameters<typeof Image>[0]["src"];
@@ -20,7 +21,7 @@ const projects: Project[] = [
     description: "A domain and IP lookup tool that provides instant access to registration and ownership data.",
     url: "https://whois.ferdystawn.my.id/",
     github: "https://github.com/ferdysetiawan/whois",
-    tags: ["Network", "Domain"],
+    tags: ["Web", "Domain"],
     released: true,
   },
   {
@@ -41,10 +42,12 @@ const projects: Project[] = [
     released: true,
   },
   {
-    title: "PROJECT FOUR",
-    description: "Short description of what this project does and the problem it solves.",
-    tags: ["Tag1", "Tag2"],
-    released: false,
+    image: Otdr,
+    title: "OTDRKU",
+    description: "OTDRKU is a web app for opening, viewing, and analyzing OTDR measurement files in Bellcore or Telcordia .SOR format.",
+    url : "https://otdrku.ferdystawn.my.id",
+    tags: ["Network", "Tools"],
+    released: true,
   },
   {
     title: "PROJECT FIVE",
